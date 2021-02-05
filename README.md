@@ -1,10 +1,12 @@
 # Assessment: ERC20 Smart Contract
 
-Objective: Create an ERC20 smart contract and make two APIs to fetch user balance and transfer tokens using NodeJs.
+# Objective:
+
+Create an ERC20 smart contract and make two APIs to fetch user balance and transfer tokens using NodeJs.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Solution:
+# Solution:
 
 I have created three solidity files:
   1. MyContract.sol
