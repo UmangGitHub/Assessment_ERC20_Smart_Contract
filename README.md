@@ -9,11 +9,11 @@ Create an ERC20 smart contract and make two APIs to fetch user balance and trans
 # Solution:
 
 I have created three solidity files:
-  1. MyContract.sol
+  1. MyContract.sol<br/>
      Implementation of interface ERC20.
-  2. SafeMath.sol
+  2. SafeMath.sol<br/>
      Library to perform addition and subtraction 
-  3. ERC20.sol
+  3. ERC20.sol<br/>
      Interface ERC20
      
 -----------------------
@@ -32,22 +32,22 @@ Step by step instructions to fetch user balance and transfer tookens using NodeJ
   1. Open Command Prompt and go to an empty directory
   
   2. Initialize the directory:
-     Type in "npm init -y"
+  	Type in "npm init -y"
   
   3. Install Web3.js
-	   Type in “npm install –save web3”
+  	Type in “npm install –save web3”
      
   4. Start NodeJS Environment
-	   Type in "node"
+  	Type in "node"
      
-  5. Use web3.js to interact with MyContract
-	   Type in:
-	   const Web3 = require('web3');
-	   const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
-     var myContract = new web3.eth.Contract([ABI], "Contract Address");
-     
-     a.) To fetch user balance:
-         myContract.methods.balanceOf("Token_Owner").call().then(console.log);
-         
-     b.) To transfer tokens:
-         myContract.methods.transfer("Receiver_Address", "No_Tokens").send({from: "Sender_Address"}).then(console.log);
+  5. Use web3.js to interact with MyContract.
+  
+  6. const Web3 = require('web3');
+  
+  7. const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
+  
+  8. var myContract = new web3.eth.Contract([ABI], "Contract Address");
+  
+  9. To fetch user balance: myContract.methods.balanceOf("Token_Owner").call().then(console.log);
+  
+  10. To transfer tokens: myContract.methods.transfer("Receiver_Address", "No_Tokens").send({from: "Sender_Address"}).then(console.log);
