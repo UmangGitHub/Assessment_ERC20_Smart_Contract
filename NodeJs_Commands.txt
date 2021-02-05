@@ -1,0 +1,23 @@
+1. Initialize a new Directory
+	Type in "npm init -y"
+
+2. Install Web3.js
+	Type in “npm install –save web3”
+
+3. Start NodeJS Environment
+	Type in "node"
+
+4. Use web3.js to interact with MyContract
+	Type in
+	const Web3 = require('web3');
+	const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
+	
+	a.) Create instance of the contract:
+      var myContract = new web3.eth.Contract([ABI], "Contract Address");
+	
+	b.) Fetch user balance:
+      myContract.methods.balanceOf("Token_Owner").call().then(console.log);
+
+	c.) Transfer tokens:
+      myContract.methods.transfer("Receiver_Address", "No_Tokens").send({from: "Sender_Address"}).then(console.log);
+	
